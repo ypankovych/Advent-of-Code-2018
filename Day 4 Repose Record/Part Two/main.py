@@ -31,5 +31,5 @@ def main(data):
 
 if __name__ == '__main__':
     results = main(get_data())
-    guard = max(results.items(), key=lambda item: sum(item[1].values()))
+    guard = max(results.items(), key=lambda item: item[1].most_common(1)[0][1])
     print(int(guard[0]) * guard[1].most_common(1)[0][0])
