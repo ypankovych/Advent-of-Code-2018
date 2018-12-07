@@ -8,7 +8,7 @@ res = ''.join(nx.lexicographical_topological_sort(Graph))
 print(res)
 
 # part 2
-res = max(sum(map(lambda x: ord(x.lower()) - 96 + 60, path))
+res = max(sum(map(lambda x: ord(x.lower()) - 36, path))
           for path in nx.all_simple_paths(Graph, source=res[0], target=res[-1]))
 
 print(res)
